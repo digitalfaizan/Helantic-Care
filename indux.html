@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Premium UI Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <title>Helantic Care | Premium Home Healthcare</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="Healentic.png" alt="Helantic Care"></a>
+            </div>
+            
+            <!-- The Burger Button (Visible only on mobile/tablet) -->
+            <button class="burger-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navMenu">
+                <li><a href="#" class="nav-link" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#services" class="nav-link" onclick="toggleMenu()">Services</a></li>
+                <li><a href="#" class="nav-link" onclick="toggleMenu()">About</a></li>
+                <li><a href="#" class="nav-link" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="main-container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <span class="tag-line">📍 Trusted 24/7 Home Healthcare</span>
+                        <h1>Hospital-Quality Medical Care <span>Right at Your Doorstep.</span></h1>
+                        <p class="sub-heading">Bring professional ICU setups, background-verified nursing, and compassionate patient care assistants directly to your home in <span id="dynamic-city" class="city-highlight">Delhi</span>.</p>
+                        <div class="btn-container">
+                            <a href="#services" class="hero-cta">Book Assessment</a>
+                            <a href="tel:+919999999999" class="hero-cta whatsapp-btn">📞 Call Expert Now</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.pexels.com/photos/7446750/pexels-photo-7446750.jpeg" alt="Compassionate home caregiver with senior patient">
+                        <!-- Advanced UX Layered Floating Elements -->
+                        <div class="floating-card card-top">
+                            <span class="card-icon">🛡️</span>
+                            <div>
+                                <h4>100% Verified</h4>
+                                <p>Medical Staff</p>
+                            </div>
+                        </div>
+                        <div class="floating-card card-bottom">
+                            <span class="card-icon">⭐</span>
+                            <div>
+                                <h4>4.9/5 Rating</h4>
+                                <p>Excelled Care</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="services-section">
+            <div class="main-container">
+                <div class="section-header">
+                    <span class="section-badge">OUR MEDICAL SERVICES</span>
+                    <h2>Hospital-Grade Care, Delivered at Home</h2>
+                    <p>Expert medical professionals and advanced nursing interventions customized completely around your family's needs.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1: Male Attendant -->
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="https://images.pexels.com/photos/5888147/pexels-photo-5888147.jpeg" alt="Male Attendant Home Care">
+                        </div>
+                        <div class="service-card-content">
+                            
+                            <h3>Male Attendant</h3>
+                            <p>Professional male caregivers assisting with daily living activities, personal hygiene, mobility support, and feeding care.</p>
+                            <a href="#" class="service-link" onclick="selectService('Male Attendant')">Book Care →</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Female Attendant -->
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="https://images.pexels.com/photos/5207093/pexels-photo-5207093.jpeg" alt="Female Attendant Home Care">
+                        </div>
+                        <div class="service-card-content">
+                           
+                            <h3>Female Attendant</h3>
+                            <p>Compassionate female attendants specializing in elderly care, companionship, emotional support, and routine physical management.</p>
+                            <a href="#" class="service-link" onclick="selectService('Female Attendant')">Book Care →</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Doctor Home Visit -->
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="https://images.pexels.com/photos/6753271/pexels-photo-6753271.jpeg" alt="Doctor Home Visit">
+                        </div>
+                        <div class="service-card-content">
+                            
+                            <h3>Doctor Home Visit</h3>
+                            <p>Skip hospital lines. Certified general physicians visiting your home for detailed checkups and medical reviews.</p>
+                            <a href="#" class="service-link" onclick="selectService('Doctor Visit')">Book Care →</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4: Physiotherapy at Home -->
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="https://images.pexels.com/photos/7551627/pexels-photo-7551627.jpeg" alt="Physiotherapy at Home">
+                        </div>
+                        <div class="service-card-content">
+                            
+                            <h3>Physiotherapy at Home</h3>
+                            <p>Expert physical therapists helping with stroke rehab, joint pain management, and post-surgery mobility drills.</p>
+                            <a href="#" class="service-link" onclick="selectService('Physiotherapy')">Book Care →</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 5: IV & Drip Home -->
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="https://images.pexels.com/photos/6753447/pexels-photo-6753447.jpeg" alt="IV and Drip Administration">
+                        </div>
+                        <div class="service-card-content">
+                            
+                            <h3>IV & Drip Administration</h3>
+                            <p>Safe administration and clinical monitoring of intravenous drips, saline infusions, and prescribed injections.</p>
+                            <a href="#" class="service-link" onclick="selectService('IV and Drip')">Book Care →</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 6: Dressing Home -->
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="https://images.pexels.com/photos/31837693/pexels-photo-31837693.jpeg" alt="Wound Dressing Home Care">
+                        </div>
+                        <div class="service-card-content">
+                            
+                            <h3>Wound Dressing</h3>
+                            <p>Sterile wound management handled by professional clinical nurses for bedsores, surgical cuts, and diabetic ulcers.</p>
+                            <a href="#" class="service-link" onclick="selectService('Wound Dressing')">Book Care →</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 7: Blood Sample Home -->
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="https://images.pexels.com/photos/4047146/pexels-photo-4047146.jpeg" alt="Blood Sample Collection">
+                        </div>
+                        <div class="service-card-content">
+                           
+                            <h3>Blood Sample at Home</h3>
+                            <p>Convenient, painless doorstep sample extraction with secure transfer logistics to top diagnostic labs.</p>
+                            <a href="#" class="service-link" onclick="selectService('Blood Sample')">Book Care →</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 8: Foley's Catheter -->
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="https://images.pexels.com/photos/35609692/pexels-photo-35609692.jpeg" alt="Foley Catheter Management">
+                        </div>
+                        <div class="service-card-content">
+                            
+                            <h3>Foley Catheter Care</h3>
+                            <p>Expert insertion, safe removal, and meticulous bladder washouts handled with absolute clinical privacy.</p>
+                            <a href="#" class="service-link" onclick="selectService('Catheter Care')">Book Care →</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 9: Enema at Home -->
+                    <div class="service-card">
+                        <div class="service-image-wrapper">
+                            <img src="https://images.pexels.com/photos/23655557/pexels-photo-23655557.jpeg" alt="Enema Administration">
+                        </div>
+                        <div class="service-card-content">
+                            
+                            <h3>Enema at Home</h3>
+                            <p>Safe, hygienic administration of therapeutic bowel cleanses by senior clinical nursing staff.</p>
+                            <a href="#" class="service-link" onclick="selectService('Enema Procedure')">Book Care →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT US SECTION -->
+        <section id="about" class="about-section">
+            <div class="main-container about-grid">
+                <div class="about-image-side">
+                    <div class="image-box">
+                        <img src="https://media.istockphoto.com/id/1847412120/photo/senior-care-nurse-and-old-woman-with-wheelchair-portrait-and-smile-in-health-at-nursing-home.jpg?s=612x612&w=0&k=20&c=TZNhRLIksmjobaOXDebCDWi1LhdpyH_Izi7axZCARog=" alt="Helantic Care Professional Nursing Staff Support">
+                        <div class="experience-badge">
+                            <span class="badge-number">10+</span>
+                            <span class="badge-text">Years of Medical Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text-side">
+                    <span class="section-badge">WHO WE ARE</span>
+                    <h2>Redefining Healthcare Comfort at Your Doorstep</h2>
+                    <p class="lead-text">Helantic Care bridges the gap between premium clinical hospital quality and the sanctuary of your home environment across Delhi NCR and Aligarh.</p>
+                    <p>Founded by healthcare innovators, we realize that recovering or aging surrounded by family produces better medical outcomes. We vet, background check, and continuous-train our male/female attendants and clinical nurses so you experience complete peace of mind.</p>
+                    
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <h3>15k+</h3>
+                            <p>Recoveries Managed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>98%</h3>
+                            <p>Patient Satisfaction</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Certified Medics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US SECTION -->
+        <section id="why-choose" class="why-section">
+            <div class="main-container">
+                <div class="section-header">
+                    <span class="section-badge">OUR ADVANTAGES</span>
+                    <h2>Why Families Trust Helantic Care</h2>
+                    <p>We hold our home interventions to strict hospital protocols, delivering clinical safety without compromises.</p>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>100% Verified Professionals</h3>
+                        <p>Every clinical nurse and home attendant undergoes detailed identity mapping, medical credential verification, and strict background checks.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Rapid Emergency Response</h3>
+                        <p>With an active logistics footprint across Delhi, Noida, Gurgaon, and Aligarh, our standby team deploys quickly when timelines matter.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>Customized Care Ecosystems</h3>
+                        <p>No two patients are identical. Our general physicians structure individualized treatment sheets updated dynamically daily.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">💳</div>
+                        <h3>Transparent, Honest Pricing</h3>
+                        <p>Zero hidden bills, zero sudden agency surcharges. High-grade clinical home nursing engineered completely affordably.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER SECTION -->
+    <footer class="main-footer">
+        <div class="main-container footer-grid">
+            <!-- Column 1: Brand & Identity -->
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <img src="Healentic.png" alt="Helantic Care Logo">
+                </div>
+                <p class="brand-desc">Hospital-grade clinical interventions and compassionate medical home care services delivered directly to your doorstep.</p>
+                <div class="contact-pill">
+                    <span class="pill-icon">📞</span>
+                    <div class="pill-text">
+                        <span>24/7 Helpline</span>
+                        <a href="tel:+919999999999" class="phone-link">+91 99999 99999</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Navigation -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#why-choose">Why Choose Us</a></li>
+                    <li><a href="#">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Care Services Breakdown -->
+            <div class="footer-col">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#services" onclick="selectService('Male Attendant')">Patient Attendant Care</a></li>
+                    <li><a href="#services" onclick="selectService('Doctor Visit')">Doctor Home Visits</a></li>
+                    <li><a href="#services" onclick="selectService('Physiotherapy')">Home Physiotherapy</a></li>
+                    <li><a href="#services" onclick="selectService('IV and Drip')">IV & Injection Care</a></li>
+                    <li><a href="#services" onclick="selectService('Wound Dressing')">Sterile Wound Dressing</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Location & Operational Window -->
+            <div class="footer-col">
+                <h3>Service Areas</h3>
+                <p class="location-text">📍 <strong>Delhi NCR:</strong> New Delhi, Noida, Gurugram, Ghaziabad, Faridabad.</p>
+                <p class="location-text">📍 <strong>Uttar Pradesh:</strong> Aligarh & surrounding regions.</p>
+                <div class="hours-box">
+                    <span class="hours-badge">🔴 Live Operating Hours</span>
+                    <p>Attendants: 12Hr / 24Hr Shifts<br>Clinical Procedures: 8:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Compliance Sub-Footer Bar -->
+        <div class="sub-footer">
+            <div class="main-container sub-footer-flex">
+                <p>&copy; 2026 Helantic Care. All rights reserved.</p>
+                <ul class="sub-footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Clinical Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTWEIGHT INTERACTIVE LOGIC SCRIPT -->
+    <script>
+        // 1. Dynamic Localized City Looper
+        const cities = ["Delhi", "Noida", "Ghaziabad", "Aligarh"];
+        let currentCityIndex = 0;
+        const cityElement = document.getElementById("dynamic-city");
+
+        setInterval(() => {
+            cityElement.style.opacity = 0;
+            setTimeout(() => {
+                currentCityIndex = (currentCityIndex + 1) % cities.length;
+                cityElement.textContent = cities[currentCityIndex];
+                cityElement.style.opacity = 1;
+            }, 300);
+        }, 3000);
+
+        // 2. Interactive Lead Capture Helper
+        function selectService(serviceName) {
+            alert(`Thank you for selecting Helantic Care! We have prepared a customized assignment request for: "${serviceName}". Direct booking confirmation lines are opening now.`);
+        }
+
+        // 3. Burger Menu Drawer Controller
+        function toggleMenu() {
+            // Check if we are actually on a mobile display before running the script
+            if (window.innerWidth <= 768) {
+                const navMenu = document.getElementById("navMenu");
+                const burgerBtn = document.querySelector(".burger-toggle");
+                
+                // Toggles the active visibility states smoothly
+                navMenu.classList.toggle("active");
+                burgerBtn.classList.toggle("active");
+            }
+        }
+    </script>
+</body>
+</html>
